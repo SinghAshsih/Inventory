@@ -56,19 +56,19 @@ public class PurchasePojo {
 		this.amountPaid = amountPaid;
 	}
 
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
 	public ProductPojo getProduct() {
 		return product;
 	}
 
 	public void setProduct(ProductPojo product) {
 		this.product = product;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 }
