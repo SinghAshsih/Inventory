@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.inventory.entity.ProductPojo;
 import com.inventory.repository.CategoryRepo;
 import com.inventory.repository.ProductRepo;
+import com.inventory.repository.PurchaseRepo;
 import com.inventory.service.ProductService;
 
 @Service
@@ -17,6 +18,8 @@ public class ProductServiceImpl implements ProductService {
 	CategoryRepo categoryRepo;
 	@Autowired
 	ProductRepo productRepo;
+	@Autowired
+	PurchaseRepo purchaseRepo;
 
 	@Override
 	public Iterable<ProductPojo> getAll() {
@@ -27,6 +30,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public ProductPojo createProduct(ProductPojo product) {
+
 		return productRepo.save(product);
 	}
 

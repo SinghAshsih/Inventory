@@ -1,0 +1,80 @@
+                                      GIT NOTES-
+									  
+What is Git?
+Git is an open-source distributed version control system. It is designed to handle minor to major projects with high speed and efficiency. 
+It is developed to co-ordinate the work among the developers. The version control allows us to track and work together with our team members at the same workspace.
+
+Git is foundation of many services like GitHub and GitLab, but we can use Git without using any other Git services. Git can be used privately and publicly.
+
+Git was created by Linus Torvalds in 2005 to develop Linux Kernel. It is also used as an important distributed version-control tool for the DevOps.
+
+Git is easy to learn, and has fast performance. It is superior to other SCM tools like Subversion, CVS, Perforce, and ClearCase.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Features of Git
+Some remarkable features of Git are as follows
+
+Open Source
+Git is an open-source tool. It is released under the GPL (General Public License) license.
+
+Scalable
+Git is scalable, which means when the number of users increases, the Git can easily handle such situations.
+
+Distributed
+One of Git's great features is that it is distributed. Distributed means that instead of switching the project to another machine, we can create a "clone" of the entire repository. 
+Also, instead of just having one central repository that you send changes to, every user has their own repository that contains the entire commit history of the project.
+ We do not need to connect to the remote repository; the change is just stored on our local repository. If necessary, we can push these changes to a remote repository.
+
+
+Security
+Git is secure. It uses the SHA1 (Secure Hash Function) to name and identify objects within its repository. 
+Files and commits are checked and retrieved by its checksum at the time of checkout. 
+It stores its history in such a way that the ID of particular commits depends upon the complete development history leading up to that commit. 
+Once it is published, one cannot make changes to its old version.
+
+Speed
+Git is very fast, so it can complete all the tasks in a while. Most of the git operations are done on the local repository, so it provides a huge speed. 
+Also, a centralized version control system continually communicates with a server somewhere.
+Performance tests conducted by Mozilla showed that it was extremely fast compared to other VCSs. 
+Fetching version history from a locally stored repository is much faster than fetching it from the remote server. 
+The core part of Git is written in C, which ignores runtime overheads associated with other high-level languages.
+Git was developed to work on the Linux kernel; therefore, it is capable enough to handle large repositories effectively. 
+From the beginning, speed and performance have been Git's primary goals.
+
+Supports non-linear development
+Git supports seamless branching and merging, which helps in visualizing and navigating a non-linear development. 
+A branch in Git represents a single commit. We can construct the full branch structure with the help of its parental commit.
+
+
+
+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
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+..
+.
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
