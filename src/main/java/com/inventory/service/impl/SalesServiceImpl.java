@@ -6,8 +6,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.inventory.entity.ExceptionResponsePojo;
 import com.inventory.entity.ProductPojo;
 import com.inventory.entity.SalesPojo;
+import com.inventory.exception_handling_code.ResourceNotFoundException;
 import com.inventory.repository.ProductRepo;
 import com.inventory.repository.SalesRepo;
 import com.inventory.service.SalesService;
@@ -27,6 +29,18 @@ public class SalesServiceImpl implements SalesService {
 
 		Integer q1 = obj.getQuantity();
 		Integer q2 = sales.getQuantity();
+
+		ExceptionResponsePojo exception = new ExceptionResponsePojo();
+//		if (q1 < q2) {
+//			exception.setErrorCode("000");
+//			exception.setErrorMessage("No more quantity . Please check stock");
+//			exception.getErrorCode();
+//			exception.getErrorMessage();
+//			exception.getRequestedURI();
+//		}
+		if (q1 < q2) {
+			throw new ResourceNotFoundException("Quantity is not enough ");
+		}
 		Integer sub = q1 - q2;
 		obj.setQuantity(sub);
 		productRepo.save(obj);

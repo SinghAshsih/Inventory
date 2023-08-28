@@ -13,9 +13,9 @@ public class GlobalApiExceptionHandlerController {
 
 	@ExceptionHandler(ResourceNotFoundException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public @ResponseBody ExceptionResponse handleEmployeeNotFound(ResourceNotFoundException exception,
+	public @ResponseBody ExceptionResponsePojo handleEmployeeNotFound(ResourceNotFoundException exception,
 			final HttpServletRequest request) {
-		ExceptionResponse error = new ExceptionResponse();
+		ExceptionResponsePojo error = new ExceptionResponsePojo();
 		error.setErrorMessage(exception.getMessage());
 		error.setRequestedURI(request.getRequestURI());
 		error.setErrorCode("HTTP-404");
