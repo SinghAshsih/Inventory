@@ -40,4 +40,9 @@ public class UserController {
 		return "Delete Successfully";
 
 	}
+
+	@GetMapping("/{id}")
+	public UserPojo findById(@PathVariable Long id) {
+		return userService.findById(id);
+	}
 }

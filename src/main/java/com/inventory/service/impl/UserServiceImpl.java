@@ -1,5 +1,7 @@
 package com.inventory.service.impl;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -45,6 +47,12 @@ public class UserServiceImpl implements UserService {
 	public void delete(Long id) {
 		userRepo.deleteById(id);
 
+	}
+
+	@Override
+	public UserPojo findById(Long id) {
+		Optional<UserPojo> opt = userRepo.findById(id);
+		return opt.get();
 	}
 
 }

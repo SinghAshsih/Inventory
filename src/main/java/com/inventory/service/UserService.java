@@ -12,4 +12,6 @@ public interface UserService {
 
 	void delete(Long id);
 
+	UserPojo findById(Long id);
+
 }
