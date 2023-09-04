@@ -16,6 +16,7 @@ import com.inventory.service.ProductService;
 @RestController
 @RequestMapping(value = "/products")
 public class ProductController {
+
 	@Autowired
 	ProductService productService;
 

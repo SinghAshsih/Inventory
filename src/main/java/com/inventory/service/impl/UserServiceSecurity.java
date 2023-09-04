@@ -26,4 +26,5 @@ public class UserServiceSecurity implements UserDetailsService {
 		return userr;
 	}
 
+
 }
