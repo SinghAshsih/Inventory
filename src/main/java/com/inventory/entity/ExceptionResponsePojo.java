@@ -9,6 +9,7 @@ public class ExceptionResponsePojo {
 		return errorCode;
 	}
 
+	
 	public void setErrorCode(String errorCode) {
 		this.errorCode = errorCode;
 	}
