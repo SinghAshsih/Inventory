@@ -1,5 +1,6 @@
 package com.inventory.controller;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,14 +14,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.inventory.entity.CategoryPojo;
 import com.inventory.service.CategoryService;
 
+import ch.qos.logback.classic.Logger;
+
 @RestController
 @RequestMapping("/category")
 public class CategoryController {
+	Logger logger = (Logger) LoggerFactory.getLogger(CategoryController.class);
+
 	@Autowired
 	CategoryService categoryService;
 
 	@GetMapping
 	public Iterable<CategoryPojo> getAll() {
+		logger.info("In getAll method");
 		return categoryService.getAll();
 	}
 
